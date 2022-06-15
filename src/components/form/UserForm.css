@@ -1,0 +1,31 @@
+#user-form {
+    background-color: #ffffff;
+    padding: 20px;
+}
+.input-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: var(--tiny-margin);
+}
+#user-form label {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: var(--tiny-margin);
+}
+#user-form input {
+    font-size: 1rem;
+    padding: 4px;
+}
+#user-form input:focus {
+    outline-color: var(--color-purple);
+}
+#user-form button[type="submit"] {
+    background-color: var(--color-purple);
+    border: none;
+    color: #ffffff;
+    font-size: 1rem;
+    padding: 4px 16px;
+}
+#user-form button[type="submit"]:hover {
+    cursor: pointer;
+}

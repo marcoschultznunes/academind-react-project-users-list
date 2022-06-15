@@ -1,3 +1,13 @@
+:root {
+  --color-lightgray: #464646;
+  --color-darkgray: #1e1d1e;
+  --color-purple: rgba(76,11,86,1);
+  --big-margin: 40px;
+  --normal-margin: 20px;
+  --small-margin: 10px;
+  --tiny-margin: 8px; 
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -5,6 +15,16 @@
 }
 
 body {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-darkgray);
+  font-size: 16px;
+  padding: 40px 25vw;
+}
+@media (max-width: 500px){
+  body{
+    padding: 20px 20px;
+  }
+}
+
+.round-container {
+  border-radius: 10px;
 }

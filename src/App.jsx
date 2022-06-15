@@ -1,8 +1,9 @@
 import React from "react";
+import UserForm from "./components/form/UserForm";
 
 const App = () => {
     return <React.Fragment>
-        <h3>Hello There!</h3>
+        <UserForm />
     </React.Fragment>;
 };
 
