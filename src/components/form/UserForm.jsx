@@ -1,34 +1,48 @@
-import { useRef } from "react"
-import "./UserForm.css"
+import { useRef, useState } from "react";
+import "./UserForm.css";
+import validate from '../validators/User';
 
 const UserForm = (props) => {
-    const usernameRef = useRef()
-    const ageRef = useRef()
+    const usernameRef = useRef();
+    const ageRef = useRef();
+    const [errors, setErrors] = useState([]);
+
+    const changeHandler = (e) => {
+        setErrors([])
+    }
 
     const submitHandler = (e) => {
         e.preventDefault()
-        props.addUser(usernameRef.current.value, ageRef.current.value)
-        usernameRef.current.value = ""
-        ageRef.current.value = ""
-    }
+        const username = usernameRef.current.value;
+        const age = ageRef.current.value;
+
+        const validationErrors = validate(username, age);
+
+        if(validationErrors.length === 0){
+            props.addUser(username, Number.parseInt(age));
+            usernameRef.current.value = "";
+            ageRef.current.value = "";
+        }
+
+        setErrors(validationErrors);
+    };
 
     return <form action="" className="round-container" id="user-form" onSubmit={submitHandler}>
         <div className="input-container">
             <label htmlFor="username">Username</label>
-            <input type="text" name="username" ref={usernameRef}/>
+            <input type="text" name="username" ref={usernameRef} onChange={changeHandler}/>
         </div>
         <div className="input-container">
             <label htmlFor="age">Age (Years)</label>
-            <input type="text" name="age" ref={ageRef}/>
+            <input type="text" name="age" ref={ageRef} onChange={changeHandler}/>
         </div>
         <div className="error-msgs-container">
-            <p>Username is required</p>
-            <p>Age is required</p>
+            {errors.map((e, i) => <p key={i}>* {e}</p>)}
         </div>
         <div className="submit-btn-container">
             <button type="submit">Add User</button>
         </div>
-    </form>
-}
+    </form>;
+};
  
 export default UserForm;
