@@ -9,6 +9,7 @@
     margin-bottom: var(--tiny-margin);
 }
 
+/* labels and inputs */
 #user-form label {
     font-size: 1rem;
     font-weight: bold;
@@ -24,12 +25,15 @@
     outline-color: var(--color-purple);
 }
 
+/* submit button */
 #user-form button[type="submit"] {
     background-color: var(--color-purple);
     border: none;
     color: #ffffff;
     font-size: 1rem;
     padding: 4px 16px;
+    display: flex;
+    justify-content: center;
 }
 #user-form button[type="submit"]:hover {
     background-color: var(--color-purple-bright);
@@ -39,6 +43,7 @@
     text-shadow: 0 0 2px #ffffff;
 }
 
+/* the errors */
 .error-msgs-container {
     margin-bottom: var(--tiny-margin);
 }

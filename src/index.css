@@ -24,7 +24,7 @@ body {
   padding: var(--big-margin) 25vw;
 }
 .round-container {
-  border-radius: 10px;
+  border-radius: 8px;
   margin-bottom: var(--big-margin);
 }
 @media (max-width: 500px){
