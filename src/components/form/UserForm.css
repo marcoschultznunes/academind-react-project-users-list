@@ -1,12 +1,14 @@
 #user-form {
     background-color: #ffffff;
-    padding: 20px;
+    padding: var(--normal-margin);
 }
+
 .input-container {
     display: flex;
     flex-direction: column;
     margin-bottom: var(--tiny-margin);
 }
+
 #user-form label {
     font-size: 1rem;
     font-weight: bold;
@@ -21,6 +23,7 @@
 #user-form input:focus {
     outline-color: var(--color-purple);
 }
+
 #user-form button[type="submit"] {
     background-color: var(--color-purple);
     border: none;
@@ -34,4 +37,16 @@
 }
 #user-form button[type="submit"]:active {
     text-shadow: 0 0 2px #ffffff;
+}
+
+.error-msgs-container {
+    margin-bottom: var(--tiny-margin);
+}
+.error-msgs-container p {
+    color: var(--color-red);
+    font-size: 0.75rem;
+    margin-bottom: 2px;
+}
+.error-msgs-container p:last-child{
+    margin-bottom: 0;
 }

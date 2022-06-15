@@ -1,6 +1,6 @@
 .users-list-container {
     background-color: #ffffff;
-    padding: 20px;
+    padding: var(--normal-margin);
 }
 .users-list-container ul {
     font-size: 1rem;
@@ -13,7 +13,7 @@
     padding: 8px;
 }
 .users-list-container ul li {
-    margin-top: var(--tiny-margin);
+    margin-top: var(--small-margin);
 }
 .users-list-container ul li:first-child {
     margin-top: 0;
