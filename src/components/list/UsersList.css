@@ -1,0 +1,20 @@
+.users-list-container {
+    background-color: #ffffff;
+    padding: 20px;
+}
+.users-list-container ul {
+    font-size: 1rem;
+    list-style: none;
+    padding: 0;
+}
+.users-list-container li {
+    border: 1px solid var(--color-lightgray);
+    border-radius: var(--input-border-radius);
+    padding: 8px;
+}
+.users-list-container ul li {
+    margin-top: var(--tiny-margin);
+}
+.users-list-container ul li:first-child {
+    margin-top: 0;
+}
